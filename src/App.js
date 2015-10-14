@@ -43,7 +43,7 @@ export class App extends Component {
         <Button onClick={::this.handleClick}>
         Click Me!
         </Button>
-       </div>
+      </div>
     );
   }
 }
