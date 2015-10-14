@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { NICE, SUPER_NICE } from './colors';
+import { Button } from 'Elemental';
+import delay from './utils/delay';
 
 class Counter extends Component {
   constructor(props) {
@@ -28,12 +30,20 @@ class Counter extends Component {
 }
 
 export class App extends Component {
+  async handleClick() {
+    await delay(500);
+    alert(':P');
+  }
+
   render() {
     return (
       <div>
         <Counter increment={1} color={NICE} />
         <Counter increment={5} color={SUPER_NICE} />
-      </div>
+        <Button onClick={::this.handleClick}>
+        Click Me!
+        </Button>
+       </div>
     );
   }
 }
